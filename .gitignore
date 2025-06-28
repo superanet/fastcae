@@ -1,0 +1,9 @@
+.vscode
+.vs
+/build
+/install
+/extlib
+/cmake-build-debug
+/cmake-build-release
+/pdf_processor_project
+/documents
