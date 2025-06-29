@@ -785,17 +785,17 @@ list(APPEND _depend_library
 
 **依赖关系验证**：
 ```cmake
-# 4. 实际的MainWidgets依赖关系（来自CMakeLists.txt）
+# 实际的MainWidgets依赖关系（来自CMakeLists.txt）
 MainWidgets依赖: Common PythonModule Settings DataProperty MeshData Material
                 Geometry ConfigOptions SelfDefObject ModelData ModuleBase
                 PostInterface PostPlotWidget PostWidgets ProjectTree
                 ProjectTreeExtend GeometryCommand GeometryWidgets IO SolverControl
 
-# 5. 实际的GeometryWidgets依赖关系
+# 实际的GeometryWidgets依赖关系
 GeometryWidgets依赖: PythonModule Settings DataProperty SelfDefObject
                     Geometry ModuleBase GeometryCommand
 
-# 6. 实际的PostWidgets依赖关系
+# 实际的PostWidgets依赖关系
 PostWidgets依赖: PythonModule Settings ConfigOptions ModelData ModuleBase
                 PostRenderData PostInterface PostPlotWidget PostCurveDataManager
 ```
@@ -1875,13 +1875,13 @@ graph TB
 
 **子模块管理命令**：
 ```bash
-# 8. 添加核心底座子模块
+# 添加核心底座子模块
 git submodule add https://github.com/FastCAE/FITK_Kernel.git FITK_Kernel
 
-# 9. 初始化所有子模块
+# 初始化所有子模块
 git submodule update --init --recursive
 
-# 10. 拉取子模块最新代码
+# 拉取子模块最新代码
 ./PullSubmodules.sh
 ```
 
@@ -1940,17 +1940,17 @@ graph LR
 
 **qmake工程配置示例**：
 ```pro
-# 11. 主工程文件示例
+# 主工程文件示例
 TARGET = FastCAE_App
 TEMPLATE = app
 
-# 12. 依赖库配置
+# 依赖库配置
 LIBS += -lFITK_Kernel -lFITK_Interface -lFITK_Component
 
-# 13. 包含路径
+# 包含路径
 INCLUDEPATH += FITK_Kernel FITK_Interface FITK_Component
 
-# 14. 源文件包含
+# 源文件包含
 include(Data/Data.pri)
 include(GUI/GUI.pri)
 include(Operator/Operator.pri)
