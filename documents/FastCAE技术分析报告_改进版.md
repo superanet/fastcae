@@ -292,9 +292,9 @@ graph TB
     end
 
     %% MVC核心关系
-    O1 <--> D1 : "读取/修改数据"
-    G1 <--> O1 : "触发操作/更新界面"
-    G1 --> D1 : "显示数据"
+    O1 <--> D1
+    G1 <--> O1
+    G1 --> D1
 
     %% 支撑系统关系
     C1 --> D1
@@ -1039,9 +1039,9 @@ classDiagram
         -readFileHeader(filePath: QString) : FileHeader
     }
 
-    FITKGeoCompOCCInterface --> FITKAbstractOCCModel : creates
-    FITKAbstractOCCModel <|-- FITKOCCModelSimpleShape : inherits
-    FITKAbstractOCCModel <|-- FITKOCCModelOperSolid : inherits
+    FITKGeoCompOCCInterface --> FITKAbstractOCCModel
+    FITKAbstractOCCModel <|-- FITKOCCModelSimpleShape
+    FITKAbstractOCCModel <|-- FITKOCCModelOperSolid
     FITKAbstractOCCModel <|-- FITKOCCModelImport : inherits
 ```
 
@@ -1447,8 +1447,8 @@ protected:
            +createParaByString(QString s) GeometryModelParaBase*
        }
 
-       GeometrySet --> GeometrySet : contains
-       GeometrySet --> GeometryModelParaBase : uses
+       GeometrySet --> GeometrySet
+       GeometrySet --> GeometryModelParaBase
    ```
 
 #### 4.1.3.2. TopoDS_Shape封装机制
@@ -1606,10 +1606,10 @@ graph TB
         J[mesh.vtk输出文件]
     end
 
-    B --> E : QProcess启动
-    E --> I : 读取
-    H --> J : 写入
-    B --> J : 读取结果
+    B --> E
+    E --> I
+    H --> J
+    B --> J
 ```
 
 #### 4.2.2.2. 参数配置系统
